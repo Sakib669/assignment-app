@@ -1,0 +1,21 @@
+.Header{
+    text-align: center;
+}
+
+.Header img{
+    height: 200px;
+}
+
+.Header nav{
+    background-color: goldenrod;
+    font-weight: 450;
+    font-size: 25px;
+    padding: 10px;
+
+}
+.Header a{
+    text-decoration: none;
+    margin-right: 30px;
+    color: #0294fc;
+    text-transform:uppercase;
+}
