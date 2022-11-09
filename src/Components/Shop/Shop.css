@@ -1,0 +1,10 @@
+.shop-container{
+    display: flex;
+}
+.left-side{
+    width: 70%;
+    margin: 5px 5px 5px 20px;
+}
+.right h3{
+    text-align: center;
+}

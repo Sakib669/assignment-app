@@ -1,29 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import fakeData from '../api json/MOCK_DATA.json';
-import './Card.css'
+import React from 'react';
+import './Card.css';
+import Plus from '../logo.svg'
+
 
 
 const Card = (props) => {
-    let [count, setCount] = useState([]);
-    
-    useEffect(() => {
-        setCount(fakeData)
-    }, [])
+    console.log(props)
 
-    let images = count.map(crs => crs.Image2);
-    let course = count.map(crs => crs.Course);
-    let price = count.map(crs => crs.Price);
-
+    let {Course, Price , Image2} = props.count;
     
-    // console.log(count);
     return (
         <div className='Card'>
-            <div className="left">
-            <img src={images} alt="" />
-                <h2>{course}</h2>
-                <br />
-                <p>{price}</p>
-            </div>
+           <div className='left-product'>
+                <img src={Image2}/>
+           </div>
+           <div className="right-product">
+            <h2 className='product-name'>Product Name: {Course}</h2>
+            <br />
+            <h5>Price: {Price}$</h5>
+            <button onClick={() => props.handleClick(props.count)} className='add-cart'>Add to Cart</button>
+           </div>
         </div>
     );
 };
